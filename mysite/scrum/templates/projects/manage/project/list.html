@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}My projects{% endblock %}
+{% block content %}
+<h1>My Projects</h1>
+<div class="module">
+{% for project in object_list %}
+<div class="project-info">
+<h5><a href="detail.html">{{ project.title }}</h5>
+</div>
+{% empty %}
+<p>You haven't created any projects yet.</p>
+{% endfor %}
+</div>
+{% endblock %}
